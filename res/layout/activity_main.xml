@@ -8,42 +8,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/from_field"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="32dp"
-        android:text="From:" />
-
     <EditText
         android:id="@+id/from_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
         android:layout_marginLeft="16dp"
-        android:ems="10" >
+        android:ems="10"
+        android:hint="Start"
+        android:enabled="false"
+        android:editable="false">
 
         <requestFocus />
     </EditText>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/from_field"
-        android:layout_below="@+id/from_field"
-        android:layout_marginTop="20dp"
-        android:text="To:" />
 
     <EditText
         android:id="@+id/to_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:ems="10" />
+        android:ems="10"
+        android:hint="Destination"
+        android:layout_below="@+id/from_field"
+        android:layout_alignLeft="@+id/from_field"
+        android:layout_alignStart="@+id/from_field"
+        android:layout_marginTop="29dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map It!"
+        android:id="@+id/mapit"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/to_field"
+        android:layout_alignLeft="@+id/to_field"
+        android:layout_alignStart="@+id/to_field"
+        android:onClick="ShowDirections"/>
+
+
 
 </RelativeLayout>
